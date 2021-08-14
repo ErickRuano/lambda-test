@@ -34,7 +34,7 @@ jobs:
   create_lambda:
     runs-on: ubuntu-latest
     needs: deploy_lambda
-    if: ${{always() && needs.deploy_lambda.outputs.aws-err == 'Function not found'}}
+#     if: ${{always() && needs.deploy_lambda.outputs.aws-err == 'Function not found'}}
     steps:
       - uses: actions/checkout@v2
       - name: Configure AWS Credentials
